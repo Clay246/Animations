@@ -1,5 +1,10 @@
+# mplanimations
 
 This module was created for my own use, so it may not be easy for others to work with. Nevertheless, I have created the documentation below both as a reference for myself and so that anyone interested can look through it.
+
+Below are two examples of animations I have made using this module paired with matplotlib. The code is available in the folders along with a brief explanation of what is being shown.
+
+<img src="HuygensPrinciple/HuygensPrinciple.gif" width="425"/> <img src="UncertaintyPrinciple/UncertaintyPrinciple.gif" width="425"/>
 
 ## REQUIREMENTS:
 
