@@ -9,7 +9,7 @@ Below are two examples of animations I have made using this module paired with m
 ## REQUIREMENTS:
 
 - matplotlib and NumPy must be installed.
-- Interval in FuncAnimation must match interval used by mplanimations; default is 20, but it can be changed by changing "mplanimations.transitions.interval".
+- Interval in FuncAnimation must match interval used by mplanimations; default is 20, but it can be changed by changing `mplanimations.transitions.interval`.
 - An object oriented approach must be used. For example, the axes should be created as `fig, ax = plt.subplots()`.
 
 
