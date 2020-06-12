@@ -49,9 +49,9 @@ Creates a smooth transition between two colors.
 `color_transition(i, starttime, cmap, c1, c2, transitionline, transition_time=1, transition_type='sine')`
 - `i`: the index required by the FuncAnimation method
 - `starttime`: the time at which the transition should start, in seconds
-- `cmap`: the color map to be used; e.g. "plt.cm.jet" is a valid option
+- `cmap`: the color map to be used; e.g. `plt.cm.jet` is a valid option
 - `c1`: a float between 0 and 1 inclusive that indicates the starting color
-- `c2`: a float between 0 and 1 inclusive that indicates the ending number
+- `c2`: a float between 0 and 1 inclusive that indicates the ending color
 - `transitionline`: the line for which the data will be updated; must be created before use of this function; e.g. `tline = ax.plot(x, y)` gives the valid option `tline` for object
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
 - `transition_type`: the type of transition that will be displayed; options are 'sine' and `linear`; default is `sine`
