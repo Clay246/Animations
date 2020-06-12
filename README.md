@@ -10,7 +10,7 @@ Below are two examples of animations I have made using this module paired with m
 
 - matplotlib and NumPy must be installed.
 - Interval in FuncAnimation must match interval used by mplanimations; default is 20, but it can be changed by changing "mplanimations.transitions.interval".
-- An object oriented approach must be used. For example, the axes should be created as "fig, ax = plt.subplots()".
+- An object oriented approach must be used. For example, the axes should be created as `fig, ax = plt.subplots()`.
 
 
 ## FUNCTIONS:
@@ -115,14 +115,14 @@ Creates a variable that smoothy transitions between two values.
 
 ## NOTES:
 
-- For the transitions to function as intended, the values for the lines must be evenly spaced. Using NumPy's "linspace(a, b, c)" method is recommended. New transitions types can be created by not using linear spacing with some cleverness.
+- For the transitions to function as intended, the values for the lines must be evenly spaced. Using NumPy's `linspace(a, b, c)` method is recommended. New transitions types can be created by not using linear spacing with some cleverness.
 - The number of intermediate lines for a transition is set as interval/1000, so a small interval will lead to not only less FPS, but also less intermediate lines.
 - The interval set in mplanimation must be the same as the interval set for FuncAnimation for the timing to work correctly; default interval is 20
-- Lines defined using the matplotlib plot() function that are going to be changed with the module must have a comma after them (e.g. line1, = ax.plot(x, y)).
-- The interval can be changed with "mplanimations.transition.interval = number", where number is the interval you want to set.
-- All transition instances must be instantiated in advance; they can not be instantiated in the FuncAnimation animation function. This can be done by, for example, typing t1 = mplanimations.transitions() outside of the animation function, and then using this instance in the animation function.
+- Lines defined using the matplotlib plot() function that are going to be changed with the module must have a comma after them (e.g. `line1, = ax.plot(x, y)`).
+- The interval can be changed with `mplanimations.transition.interval = number`, where number is the interval you want to set.
+- All transition instances must be instantiated in advance; they can not be instantiated in the FuncAnimation animation function. This can be done by, for example, typing `t1 = mplanimations.transitions()` outside of the animation function, and then using this instance in the animation function.
 - All transitions act on lines, dots, etc. already created outside of the animation function; they do not create the lines, dots, etc.; this means that the lines, dots etc. must be created outside of the animation function, and then they will be changed by the mplanimations methods.
-- dot_transition() does not function correctly when the duration is less than or equal to transition_time.
+- `dot_transition()` does not function correctly when the duration is less than or equal to `transition_time`.
 
 
 
@@ -140,5 +140,5 @@ where the variables are the same as those for the sinusoidal transition.
 
 ## USEFUL TIPS:
 
-- Transitions can be instantiated in a list using the "for i in range()" command. They can then be accessed for the transitions.
-- Plots can be created in a list, but they must be followed by "[0]". For example, "for i in range(10):" can be used for iteration, and then "lines.append(ax.plot(x, y)[0])" to create the list "lines" with 10 lines created.
+- Transitions can be instantiated in a list using the `for i in range()` command. They can then be accessed for the transitions.
+- Plots can be created in a list, but they must be followed by `[0]`. For example, `for i in range(10):` can be used for iteration, and then `lines.append(ax.plot(x, y)[0])` to create the list "lines" with 10 lines created.
