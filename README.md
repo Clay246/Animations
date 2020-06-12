@@ -26,7 +26,7 @@ Creates a smooth transition between two alpha values.
 - `alpha2`: the final alpha value
 - `transitionline`: the line for which the data will be updated; must be created before use of this function
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are 'sine' and `linear`; default is `sine`
 
 ### Axis Transition
 Creates a smooth transition for the axis limits.
@@ -34,13 +34,13 @@ Creates a smooth transition for the axis limits.
 `axis_transition(i, starttime, xlim1, xlim2, ylim1, ylim2, axis, transition_time=1, transition_type='sine')`
 - `i`: the index required by the FuncAnimation method
 - `starttime`: the time at which the transition should start, in seconds
-- `xlim1`: a list that contains the starting x limits; e.g. "[-2, 2]"
-- `xlim2`: a list that contains the ending x limits; e.g. "[-4, 4]"
+- `xlim1`: a list that contains the starting x limits; e.g. `[-2, 2]`
+- `xlim2`: a list that contains the ending x limits; e.g. `[-4, 4]`
 - `ylim1`: a list that contains the starting y limits
 - `ylim2`: a list that contains the ending y limits
-- `axis`: the axis the transition should take place on; e.g. if "fig, ax = plt.subplots()" is used, axis should be "ax"
+- `axis`: the axis the transition should take place on; e.g. if `fig, ax = plt.subplots()` is used, axis should be `ax`
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are `sine` and `linear`; default is `sine`
 
 
 ### Color Transition
@@ -52,9 +52,9 @@ Creates a smooth transition between two colors.
 - `cmap`: the color map to be used; e.g. "plt.cm.jet" is a valid option
 - `c1`: a float between 0 and 1 inclusive that indicates the starting color
 - `c2`: a float between 0 and 1 inclusive that indicates the ending number
-- `transitionline`: the line for which the data will be updated; must be created before use of this function; e.g. "tline = ax.plot(x, y)" gives the valid option "tline" for object
+- `transitionline`: the line for which the data will be updated; must be created before use of this function; e.g. `tline = ax.plot(x, y)` gives the valid option `tline` for object
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are 'sine' and `linear`; default is `sine`
 
 
 ### Dot Transition
@@ -65,9 +65,9 @@ Creates a smooth transition for changing the dot size on a scatter plot.
 - `starttime`: the time at which the addition should start, in seconds
 - `size1`: the initial size of the dot
 - `size2`: the final size of the dot
-- `dot`: the scatter plot for which the dot size will be updated (e.g. dot = ax.scatter(0, 0))
+- `dot`: the scatter plot for which the dot size will be updated (e.g. `dot = ax.scatter(0, 0)`)
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `duration`: the amount of time, in seconds, the dot will be on the screen before the exit transition begins; default is 'inf' for infinity, but any other must be integers or floats
+- `duration`: the amount of time, in seconds, the dot will be on the screen before the exit transition begins; default is `inf` for infinity, but any other must be integers or floats
 
 
 ### Line Transition
@@ -77,25 +77,25 @@ Creates a smooth transition between two functions of x.
 - `i`: the index required by the FuncAnimation method
 - `starttime`: the time at which the transition should start, in seconds
 - `yvals1`: the y values of the initial function in a numpy array; in the form of some function performed on xvals (e.g. xvals**2)
-- `yvals2`: the y values of the final function in a numpy array; in the form of some function performed on xvals (e.g. xvals**3)
+- `yvals2`: the y values of the final function in a numpy array; in the form of some function performed on xvals (e.g. `xvals**3`)
 - `transitionline`: the line for which the data will be updated; must be created before use of this function
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are `sine` and `linear`; default is `sine`
 
 
 ### Parametric Transition
 Creates a smooth transition between two sets of parametric equations.
 
-par_transition(i, starttime, xvals1, xvals2, yvals1, yvals2, transitionline, transition_time=1, transition_type='sine')
+`par_transition(i, starttime, xvals1, xvals2, yvals1, yvals2, transitionline, transition_time=1, transition_type='sine')`
 - `i`: the index required by the FuncAnimation method
 - `starttime`: the time at which the transition should start, in seconds
 - `xvals1`: the numpy array that contains the initial x values; must be linearly spaced for sinusoidal transition
 - `xvals2`: the numpy array that contains the final x values; must be linearly spaced for sinusoidal transition
-- `yvals1`: the y values of the initial function in a numpy array; in the form of some function performed on xvals (e.g. xvals**2)
-- `yvals2`: the y values of the final function in a numpy array; in the form of some function performed on xvals (e.g. xvals**3)
+- `yvals1`: the y values of the initial function in a numpy array; in the form of some function performed on xvals (e.g. `xvals**2`)
+- `yvals2`: the y values of the final function in a numpy array; in the form of some function performed on xvals (e.g. `xvals**3`)
 - `transitionline`: the line for which the data will be updated; must be created before use of this function
 - `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are `sine` and `linear`; default is `sine`
 
 
 ### Variable Transition
@@ -106,10 +106,10 @@ Creates a variable that smoothy transitions between two values.
 - `starttime`: the time at which the transition should start, in seconds
 - `initial`: the initial value of the variable that will be changing
 - `final`: the final value of the variable that will be changing
-- `transitionline`: the line for which the value of the variable will be changed; must be created before use of this function; e.g. "tline = ax.plot(x, y)" gives the valid option "tline" for object
+- `transitionline`: the line for which the value of the variable will be changed; must be created before use of this function; e.g. `tline = ax.plot(x, y)` gives the valid option `tline` for object
 - `func`: the function that the variable will be plugged into
 - `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
-- `transition_type`: the type of transition that will be displayed; options are 'sine' and 'linear'; default is 'sine'
+- `transition_type`: the type of transition that will be displayed; options are `sine` and `linear`; default is `sine`
 
 
 
