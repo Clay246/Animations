@@ -1,10 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Ideas: 
-# different types of Transitions(non-sinusoidal)
-# draw_line to have a smooth drawing of some line
-
 interval = 20
 n = 1000/interval
 
