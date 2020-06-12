@@ -1,5 +1,5 @@
 # HuygensPrinciple
-An animation that demonstrates Huygens Priniple (with the simplification that secondary point sources emit in all directions instead of only forward).
+An animation that demonstrates Huygens Priniple (with the simplification that secondary point sources emit in all directions instead of only forward). Some technical accuracy was of course sacrificed for aesthetics.
 
 ![](HuygensPrinciple.gif)
 
