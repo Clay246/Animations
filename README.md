@@ -133,7 +133,7 @@ For the sinusoidal transition, the "weight" is "shifted" unevenly so as to creat
 [L1[n-n(.5sin((pi/n)t-pi/2)+.5)]+L2[n(.5sin((pi/n)t-pi/2)+.5)]]/n
 where L1 is the NumPy array for the initial line, L2 is the NumPy array for the final line, n is a fixed number determined by the interval, and t is a number that counts up, usually from 0.
 For the linear transition, the weight is even and the intermediate lines are created through a simple weighted average using the formula:
-[L1(n-t)+L2(t)]
+[L1(n-t)+L2(t)]/n
 where the variables are the same as those for the sinusoidal transition.
 
 
