@@ -5,6 +5,11 @@ import mplanimations
 
 t = np.linspace(0, 2*np.pi, 100)
 
+half_circles = []
+
+for i in range(8):
+    half_circles.append(np.linspace(3*(np.pi/2) + i*(np.pi/4), 5*(np.pi/2) + i*(np.pi/4), 100))
+
 plt.style.use('dark_background')
 
 fig, ax1 = plt.subplots()
@@ -43,7 +48,7 @@ def animate(i):
         ts[2+n].dot_transition(i, 3+n/10, 0, ds, dots[n], duration=dur, transition_type='sine')
     
     for n in range(8):
-        ts[10+n].par_transition(i, 4.2, t*0+np.cos(n*np.pi/4), r*np.cos(t)+np.cos(n*np.pi/4), t*0+np.sin(n*np.pi/4), r*np.sin(t)+np.sin(n*np.pi/4), lines[n], transition_time=ttime, transition_type='linear')
+        ts[10+n].par_transition(i, 4.2, half_circles[n]*0+np.cos(n*np.pi/4), r*np.cos(half_circles[n])+np.cos(n*np.pi/4), half_circles[n]*0+np.sin(n*np.pi/4), r*np.sin(half_circles[n])+np.sin(n*np.pi/4), lines[n], transition_time=ttime, transition_type='linear')
     
     ts[18].axis_transition(i, 5, [-4, 4], [-7.5, 7.5], [-4, 4], [-7.5, 7.5], ax1)
     ts[19].par_transition(i, 17.5, np.cos(t), t*0, np.sin(t), t*0, tline1, transition_type='sine')
