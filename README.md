@@ -101,7 +101,7 @@ Creates a smooth transition between two sets of parametric equations.
 ### Variable Transition
 Creates a variable that smoothy transitions between two values.
 
-`var_transition(i, starttime, initial, final, transitionline, func, transition_time, transition_type='sine')`
+`var_transition(i, starttime, initial, final, transitionline, func, transition_time=1, transition_type='sine')`
 - `i`: the index required by the FuncAnimation method
 - `starttime`: the time at which the transition should start, in seconds
 - `initial`: the initial value of the variable that will be changing
