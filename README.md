@@ -1,6 +1,6 @@
 # mplanimations
 
-This module was created for my own use, so it may not be easy for others to work with, and I do not claim it is optimized as best it can be. Nevertheless, I have created the documentation below both as a reference for myself and so that anyone interested can look through it because it has allowed me to drastically simplify some animations. All that it does is simplify some common transitions that I found to be useful in creating animations.
+This module was created for my own use, so it may not be easy for others to work with, but I have nevertheless created the documentation below both as a reference for myself and so that anyone interested can look through it because it has allowed me to drastically simplify some animations. All that it does is simplify some common transitions that I found to be useful in creating animations.
 
 Below are two examples of animations I have made using this module paired with matplotlib. The code is available in the folders along with a brief explanation of what is being shown.
 
