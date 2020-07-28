@@ -2,8 +2,6 @@
 
 A module I created that works with matplotlib to create some simple transitions that can be easily applied to various aspects of a plot. The documentation for each function currently available is available below.
 
-This module was created for my own use, so it may not be easy for others to work with, but I have nevertheless created the documentation below both as a reference for myself and so that anyone interested can look through it because it has allowed me to drastically simplify some animations. All that it does is simplify some common transitions that I found to be useful in creating animations.
-
 Below are two examples of animations I have made using this module paired with matplotlib. The code is available in the folders along with a brief explanation of what is being shown.
 
 <img src="HuygensPrinciple/HuygensPrinciple.gif" width="425" title="Huygen's Principle"/> <img src="UncertaintyPrinciple/UncertaintyPrinciple.gif" width="425" title="Uncertainty Principle"/>
