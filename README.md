@@ -106,7 +106,7 @@ Creates a variable that smoothy transitions between two values.
 - `starttime`: the time at which the transition should start, in seconds
 - `initial`: the initial value of the variable that will be changing
 - `final`: the final value of the variable that will be changing
-- `transitionline`: the line for which the value of the variable will be changed; must be created before use of this function; e.g. `tline = ax.plot(x, y)` gives the valid option `tline` for object
+- `transitionline`: the line for which the value of the variable will be changed; must be created before use of this function; e.g. `tline, = ax.plot(x, y)` gives the valid option `tline` for object
 - `func`: the function that the variable will be plugged into
 - `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
 - `transition_type`: the type of transition that will be displayed; options are `sine` and `linear`; default is `sine`
