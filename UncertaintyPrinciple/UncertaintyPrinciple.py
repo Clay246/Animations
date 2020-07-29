@@ -23,6 +23,7 @@ ax.text(-20, -1, r'$\int_{-\infty}^{\infty}f(x)e^{-ikx}dx$', size=15)
 sigmatext = ax.text(10, .5, r'$\sigma = .25$', size=15)
 
 ax.axes.get_yaxis().set_visible(False)
+ax.set_xlabel('Wavelength/Wavenumber')
 
 ts = []
 
