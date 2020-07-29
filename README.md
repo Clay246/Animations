@@ -2,9 +2,11 @@
 
 A module I created that works with matplotlib to create some simple transitions that can be easily applied to various aspects of a plot. The documentation for each function currently available is available below.
 
-Below are two examples of animations I have made using this module paired with matplotlib. The code is available in the folders along with a brief explanation of what is being shown.
+Below are a few examples of animations I have made using this module paired with matplotlib. The code is available in the folders along with a brief explanation of what is being shown.
 
-<img src="HuygensPrinciple/HuygensPrinciple.gif" width="425" title="Huygen's Principle"/> <img src="UncertaintyPrinciple/UncertaintyPrinciple.gif" width="425" title="Uncertainty Principle"/>
+<img src="HuygensPrinciple/HuygensPrinciple.gif" width="45%" title="Huygen's Principle"/> <img src="UncertaintyPrinciple/UncertaintyPrinciple.gif" width="45%" title="Uncertainty Principle"/>
+
+<img src="SnellsLaw/SnellsLaw.gif" width="45%" title="Snell's Law"/>
 
 ## REQUIREMENTS:
 
