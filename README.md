@@ -118,7 +118,7 @@ Creates a variable that smoothy transitions between two values.
 ## NOTES:
 
 - For the transitions to function as intended, the values for the lines must be evenly spaced. Using NumPy's `linspace(a, b, c)` method is recommended. New transitions types can be created by not using linear spacing with some cleverness.
-- The number of intermediate lines for a transition is set as interval/1000, so a small interval will lead to not only less FPS, but also less intermediate lines.
+- The number of intermediate lines for a transition is set as `1000/interval`.
 - The interval set in mplanimation must be the same as the interval set for FuncAnimation for the timing to work correctly; default interval is 20
 - Lines defined using the matplotlib plot() function that are going to be changed with the module must have a comma after them (e.g. `line1, = ax.plot(x, y)`).
 - The interval can be changed with `mplanimations.transition.interval = number`, where number is the interval you want to set.
