@@ -117,6 +117,9 @@ class Transitions:
                 elif t >= starttime + duration and t < starttime + duration + transition_time:
                     self.dot_transition_c += 1/transition_time
                     dot.set_sizes([sine(size1, size2, self.dot_transition_c)])
+                    #On the above line I have the first two arguments the same as
+                    #the incoming transition because I am using the second part
+                    #of the sine wave, where it goes down.
                     
         if transition_type == 'linear':
             if duration == 'inf':
@@ -135,6 +138,9 @@ class Transitions:
                 elif t >= starttime + duration and t < starttime + duration + transition_time:
                     self.dot_transition_c += 1/transition_time
                     dot.set_sizes([linear(size2, size1, self.dot_transition_c)])
+                    #Contrary to the 'sine' transition type, we got from size2 to
+                    #size1 here because the downward part of the sine wave cannot
+                    #be used.
             
                 
             
