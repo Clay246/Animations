@@ -5,10 +5,7 @@ import mplanimations
 
 t = np.linspace(0, 2*np.pi, 100)
 
-half_circles = []
-
-for i in range(8):
-    half_circles.append(np.linspace(3*(np.pi/2) + i*(np.pi/4), 5*(np.pi/2) + i*(np.pi/4), 100))
+half_circles = [np.linspace(3*(np.pi/2) + i*(np.pi/4), 5*(np.pi/2) + i*(np.pi/4), 100) for i in range(8)]
 
 plt.style.use('dark_background')
 
@@ -22,17 +19,11 @@ ax1.axis('off')
 tline1, = ax1.plot(t*0, t*0, linewidth=2, c='white', zorder=1, alpha=.5)
 tdot1 = ax1.scatter(0, 0, color='white', s=0)
 
-lines = []
-for i in range(9):
-    lines.append(ax1.plot(t*0, t*0, linewidth=2, c='white', zorder=1, alpha=.5)[0])
+lines = [ax1.plot(t*0, t*0, linewidth=2, c='white', zorder=1, alpha=.5)[0] for i in range(9)]
 
-dots = []
-for i in range(8):
-    dots.append(ax1.scatter(np.cos(i*np.pi/4), np.sin(i*np.pi/4), color='white', s=0))
+dots = [ax1.scatter(np.cos(i*np.pi/4), np.sin(i*np.pi/4), color='white', s=0) for i in range(8)]
 
-ts = []
-for i in range(29):
-    ts.append(mplanimations.Transitions())
+ts = [mplanimations.Transitions() for i in range(29)]
 
 r = 12
 ttime = 11.5
