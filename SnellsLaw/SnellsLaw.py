@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-import mplanimations
+import mplanimations as ans
 
 ni = 1
 nt = 2
@@ -33,9 +33,7 @@ l1, = ax.plot([0,3], line1(s), c='red', linewidth=3)
 l2, = ax.plot([3,7], line2(s), c='red', linewidth=3)
 l3, = ax.plot([7,10], line3(s), c='red', linewidth=3)
 
-ts = []
-for i in range(6):
-    ts.append(mplanimations.Transitions())
+ts = [ans.Transitions() for i in range(6)]
 
 def animate(i):
     ts[0].var_transition(i, 1, s, -s, l1, line1, transition_time=4)
