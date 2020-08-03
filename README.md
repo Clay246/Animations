@@ -142,7 +142,7 @@ where the variables are the same as those for the sinusoidal transition.
 
 ## USEFUL TIPS:
 
-- Transitions can be instantiated in a list using the `for i in range()` command. They can then be accessed for the transitions.
-- Plots can be created in a list, but they must be followed by `[0]`. For example, `for i in range(10):` can be used for iteration, and then `lines.append(ax.plot(x, y)[0])` to create the list "lines" with 10 lines created.
+- Transitions can be instantiated in a list using the `for i in range()` command. They can then be accessed for the transitions. Alternatively this can be done in one line with `ts = [mplanimations.Transitions() for i in range(n)]`, where `n` is the number of transitions needed.
+- Plots can be created in a list, but they must be followed by `[0]`. For example, `for i in range(10):` can be used for iteration, and then `lines.append(ax.plot(x, y)[0])` to create the list "lines" with 10 lines created. This too can be done in one line using the method mentioned in the previous tip.
 - The current time in the animation (in seconds) can be accessed with the function `mplanimations.time(i)`, where `i` is the counter that is required by `FuncAnimation`.
 - `alpha_transition` and `color_transition` also work for text.
