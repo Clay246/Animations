@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-import mplanimations
+import mplanimations as ans
 
 s = .25
 
@@ -20,12 +20,12 @@ p2 = ax.plot(x, g(s), c='black')[0]
 
 ax.text(-20, .5, r'$f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-x^2}{2\sigma^2}}$', size=15)
 ax.text(-20, -1, r'$\int_{-\infty}^{\infty}f(x)e^{-ikx}dx$', size=15)
-sigmatext = ax.text(10, .5, r'$\sigma = .25$', size=15)
 
 ax.axes.get_yaxis().set_visible(False)
 ax.set_xlabel('Wavelength/Wavenumber')
+sigmatext = ax.text(10, .5, r'$\sigma = .25$', size=15)
 
-ts = [mplanimations.Transitions() for i in range(5)]
+ts = [ans.Transitions() for i in range(5)]
 
 def animate(i):
     ts[0].var_transition(i, 1, .25, 2, p1, f)
@@ -35,7 +35,7 @@ def animate(i):
     if i <= 100 or i >= 200:
         sigmatext.set_text(r'$\sigma = $' + str(round(ts[0].var, 2)))
     else:
-        sigmatext.set_text(r'$\sigma = $' + str(round(ts[2].var, 2)))   
+        sigmatext.set_text(r'$\sigma = $' + str(round(ts[2].var, 2)))
     
 
 ani = animation.FuncAnimation(fig, animate, interval=20, frames=250, repeat=False)
