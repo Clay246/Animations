@@ -5,4 +5,4 @@ The animations show a single point source that emits a wave, the crest of which 
 
 <img src="HuygensPrinciple.gif" width="45%" title="Huygen's Principle"/> <img src="HuygensPrinciple2.gif" width="45%" title="Uncertainty Principle"/>
 
-The creation of these animations was significantly simplified with the use of mplanimations, as it only requires 62 lines of code for the left animation and 52 for the right animation. The drawback, however, is that the code may be difficult to read.
+The creation of these animations was significantly simplified with the use of mplanimations, as it only requires 53 lines of code for the left animation and 46 for the right animation. The drawback, however, is that the code may be difficult to read.
