@@ -25,10 +25,7 @@ sigmatext = ax.text(10, .5, r'$\sigma = .25$', size=15)
 ax.axes.get_yaxis().set_visible(False)
 ax.set_xlabel('Wavelength/Wavenumber')
 
-ts = []
-
-for i in range(5):
-    ts.append(mplanimations.Transitions())
+ts = [mplanimations.Transitions() for i in range(5)]
 
 def animate(i):
     ts[0].var_transition(i, 1, .25, 2, p1, f)
