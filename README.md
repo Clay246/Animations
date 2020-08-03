@@ -28,7 +28,7 @@ Creates a smooth transition between two alpha values.
 - `alpha2`: the final alpha value
 - `transitionline`: the line for which the data will be updated; must be created before use of this function
 - `transition_time`: the amount of time the transition will take, in seconds; default value is 1 second
-- `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `lmplanimations.inear`; default is `mplanimations.sine`
+- `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
 
 ### Axis Transition
 Creates a smooth transition for the axis limits.
