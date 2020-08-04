@@ -22,13 +22,7 @@ class Transitions:
         Initiates the counters for each transition instance.
         """
         
-        self.alpha_transition_c = 0
-        self.axis_transition_c = 0
-        self.color_transition_c = 0
-        self.dot_transition_c = 0
-        self.line_transition_c = 0
-        self.par_transition_c = 0
-        self.var_transition_c = 0
+        self.counter = 0
         
         
         
@@ -40,10 +34,10 @@ class Transitions:
         t = time(i)
 
         if t >= starttime and t < starttime + transition_time:
-            self.alpha_transition_c += 1/transition_time
-            transitionline.set_alpha(transition_type(alpha1, alpha2, self.alpha_transition_c))
+            self.counter += 1/transition_time
+            transitionline.set_alpha(transition_type(alpha1, alpha2, self.counter))
         elif t == starttime + transition_time:
-            self.alpha_transition_c = 0
+            self.counter = 0
         
             
             
@@ -55,11 +49,11 @@ class Transitions:
         t = time(i)
         
         if t >= starttime and t < starttime + transition_time:
-            self.axis_transition_c += 1/transition_time
-            axis.set_xlim(transition_type(xlim1[0], xlim2[0], self.axis_transition_c), transition_type(xlim1[1], xlim2[1], self.axis_transition_c))
-            axis.set_ylim(transition_type(ylim1[0], ylim2[0], self.axis_transition_c), transition_type(ylim1[1], ylim2[1], self.axis_transition_c))
+            self.counter += 1/transition_time
+            axis.set_xlim(transition_type(xlim1[0], xlim2[0], self.counter), transition_type(xlim1[1], xlim2[1], self.counter))
+            axis.set_ylim(transition_type(ylim1[0], ylim2[0], self.counter), transition_type(ylim1[1], ylim2[1], self.counter))
         elif t == starttime + transition_time:
-                self.axis_transition_c = 0
+                self.counter = 0
                     
                     
                     
@@ -71,10 +65,10 @@ class Transitions:
         t = time(i)
 
         if t >= starttime and t < starttime + transition_time:
-            self.color_transition_c += 1/transition_time
-            transitionline.set_color(cmap(transition_type(c1, c2, self.color_transition_c)))
+            self.counter += 1/transition_time
+            transitionline.set_color(cmap(transition_type(c1, c2, self.counter)))
         elif t == starttime + transition_time:
-            self.color_transition_c = 0
+            self.counter = 0
                     
                     
                     
@@ -87,19 +81,19 @@ class Transitions:
                     
         if duration == 'inf':
             if t >= starttime and t < starttime + transition_time:
-                self.dot_transition_c += 1/transition_time
-                dot.set_sizes([linear(size1, size2, self.dot_transition_c)])
+                self.counter += 1/transition_time
+                dot.set_sizes([linear(size1, size2, self.counter)])
             elif t == starttime + transition_time:
-                self.add_dot_c = 0
+                self.counter = 0
         else:
             if t >= starttime and t < starttime + transition_time:
-                self.dot_transition_c += 1/transition_time
-                dot.set_sizes([transition_type(size1, size2, self.dot_transition_c)])
+                self.counter += 1/transition_time
+                dot.set_sizes([transition_type(size1, size2, self.counter)])
             elif t == starttime + transition_time:
-                self.dot_transition_c=0
+                self.counter=0
             elif t >= starttime + duration and t < starttime + duration + transition_time:
-                self.dot_transition_c += 1/transition_time
-                dot.set_sizes([transition_type(size2, size1, self.dot_transition_c)])
+                self.counter += 1/transition_time
+                dot.set_sizes([transition_type(size2, size1, self.counter)])
             
                 
             
@@ -111,10 +105,10 @@ class Transitions:
         t= time(i)
         
         if t >= starttime and t < starttime + transition_time:
-            self.line_transition_c += 1/transition_time
-            transitionline.set_ydata(transition_type(yvals1, yvals2, self.line_transition_c))
+            self.counter += 1/transition_time
+            transitionline.set_ydata(transition_type(yvals1, yvals2, self.counter))
         elif t == starttime + transition_time:
-            line_transition_c = 0
+            self.counter = 0
 
                 
                 
@@ -128,10 +122,10 @@ class Transitions:
         t = time(i)
         
         if t >= starttime and t < starttime + transition_time:
-            self.par_transition_c += 1/transition_time
-            transitionline.set_data(transition_type(xvals1, xvals2, self.par_transition_c), transition_type(yvals1, yvals2, self.par_transition_c))
+            self.counter += 1/transition_time
+            transitionline.set_data(transition_type(xvals1, xvals2, self.counter), transition_type(yvals1, yvals2, self.counter))
         elif t == starttime + transition_time:
-            self.par_transition_c = 0
+            self.counter = 0
 
 
 
@@ -144,9 +138,9 @@ class Transitions:
         self.var = initial
 
         if t >= starttime and t < starttime + transition_time:
-            self.var_transition_c += 1/transition_time
-            self.var = transition_type(initial, final, self.var_transition_c)
+            self.counter += 1/transition_time
+            self.var = transition_type(initial, final, self.counter)
             transitionline.set_ydata(func(self.var))
         elif t == starttime + transition_time:
-            self.par_transition_c = 0
+            self.counter = 0
 
