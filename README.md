@@ -8,14 +8,14 @@ Below are a few examples of animations I have made using this module paired with
 
 <img src="SnellsLaw/SnellsLaw.gif" width="45%" title="Snell's Law"/>
 
-## REQUIREMENTS:
+## Requirements:
 
 - matplotlib and NumPy must be installed.
 - Interval in FuncAnimation must match interval used by mplanimations; default is 20, but it can be changed by changing `mplanimations.interval`.
 - An object oriented approach must be used. For example, the axes should be created as `fig, ax = plt.subplots()`.
 
 
-## FUNCTIONS:
+## Functions:
 
 
 ### Alpha Transition
@@ -116,7 +116,7 @@ Creates a variable that smoothy transitions between two values.
 
 
 
-## NOTES:
+## Notes:
 
 - For the transitions to function as intended, the values for the lines must be evenly spaced. Using NumPy's `linspace(a, b, c)` method is recommended. New transitions types can be created by not using linear spacing with some cleverness.
 - The number of intermediate lines for a transition is set as `1000/interval`.
@@ -129,7 +129,7 @@ Creates a variable that smoothy transitions between two values.
 
 
 
-## HOW IT WORKS:
+## How It Works:
 
 The transitions use a kind of weighted average to create the intermediate lines.
 For the sinusoidal transition, the "weight" is "shifted" unevenly so as to create more intermediate lines closer to the beginning and final lines. The formula used to do this is:
@@ -141,7 +141,7 @@ where the variables are the same as those for the sinusoidal transition.
 
 
 
-## USEFUL TIPS:
+## Useful Tips:
 
 - Transitions can be instantiated in a list using the `for i in range()` command. They can then be accessed for the transitions. Alternatively this can be done in one line with `ts = [mplanimations.Transitions() for i in range(n)]`, where `n` is the number of transitions needed.
 - Plots can be created in a list, but they must be followed by `[0]`. For example, `for i in range(10):` can be used for iteration, and then `lines.append(ax.plot(x, y)[0])` to create the list "lines" with 10 lines created. This too can be done in one line using the method mentioned in the previous tip.
