@@ -13,6 +13,7 @@ Below are a few examples of animations I have made using this module paired with
 - matplotlib and NumPy must be installed.
 - Interval in FuncAnimation must match interval used by mplanimations; default is 20, but it can be changed by changing `mplanimations.interval`.
 - An object oriented approach must be used. For example, the axes should be created as `fig, ax = plt.subplots()`.
+- To use the functions of mplanimations, you must place mplanimations in the folder of the file you are trying to use mplanimations in. This means if you download this repository and try to run one of the animations, you must place mplanimations in the same folder as the animation you are trying to run.
 
 
 ## Functions:
