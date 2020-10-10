@@ -148,3 +148,4 @@ where the variables are the same as those for the sinusoidal transition.
 - Plots can be created in a list, but they must be followed by `[0]`. For example, `for i in range(10):` can be used for iteration, and then `lines.append(ax.plot(x, y)[0])` to create the list "lines" with 10 lines created. This too can be done in one line using the method mentioned in the previous tip.
 - The current time in the animation (in seconds) can be accessed with the function `mplanimations.time(i)`, where `i` is the counter that is required by `FuncAnimation`.
 - `alpha_transition` and `color_transition` also work for text.
+- The `FuncAnimation` method interprets the interval as milliseconds, so if you want an animation to last `x` seconds, you need `x/(interval/1000)` frames; using the default of 20ms for the interval, this is simply `x/.02` frames.
