@@ -144,3 +144,17 @@ class Transitions:
         elif t == starttime + transition_time:
             self.counter = 0
 
+    # A simpler and more versatile version that will eventually replace the var_transition function above.
+    def var_transition2(self, i, starttime, initial, final, transition_time=1, transition_type=sine):
+            """
+            Creates a variable that transitions between two values.
+            """
+
+            t = time(i)
+            self.var = initial
+
+            if t >= starttime and t < starttime + transition_time:
+                self.counter += 1/transition_time
+                self.var = transition_type(initial, final, self.counter)
+            elif t == starttime + transition_time:
+                self.counter = 0
