@@ -116,6 +116,20 @@ Creates a variable that smoothy transitions between two values.
 - `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
 
 
+### Variable Transition 2
+Creates a variable that smoothy transitions between two values.
+
+A more versatile version of the Variable Transition function above.
+
+`var_transition2(i, starttime, initial, final, transitionline, func, transition_time=1, transition_type=sine)`
+- `i`: the index required by the FuncAnimation method
+- `starttime`: the time at which the transition should start, in seconds
+- `initial`: the initial value of the variable that will be changing
+- `final`: the final value of the variable that will be changing
+- `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
+- `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
+
+
 
 ## Notes:
 
