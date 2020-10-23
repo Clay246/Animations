@@ -67,7 +67,7 @@ l2xend = [l2xcoord2(item) for item in y]
 
 rays = ax.scatter(x, y, s=5)
 
-es = [mplanimations.Effects() for i in range(1)]
+es = [mplanimations.Effects()]
 
 def animate(i):
     
