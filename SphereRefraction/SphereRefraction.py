@@ -65,7 +65,7 @@ slopes_endline = [(l3ycoord2(item)-l2ycoord2(item))/(l3xcoord2(item)-l2xcoord2(i
 l1xend = [l1xcoord2(item) for item in y]
 l2xend = [l2xcoord2(item) for item in y]
 
-rays = ax.scatter(x, y, s=5)
+rays = ax.scatter(x, y, s=2)
 
 es = [mplanimations.Effects()]
 
@@ -91,18 +91,3 @@ def animate(i):
 ani = animation.FuncAnimation(fig, animate, interval=20, frames=650, repeat=False)
 
 plt.show()
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
