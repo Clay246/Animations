@@ -16,7 +16,7 @@ Below are a few examples of animations I have made using this module paired with
 - To use the functions of mplanimations, you must place mplanimations in the folder of the file you are trying to use mplanimations in. This means if you download this repository and try to run one of the animations, you must place mplanimations in the same folder as the animation you are trying to run.
 
 
-## Functions:
+## Transition Functions:
 
 
 ### Alpha Transition
@@ -129,6 +129,19 @@ A more versatile version of the Variable Transition function above.
 - `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
 - `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
 
+
+
+## Effect Functions:
+
+
+### Tail
+Creates a fading tail behind moving scatter plot points.
+
+`tail(xcoord, ycoord, ax, color, n)`
+- `xcoord`: A list containing the current x coordinates of the points
+- `ycoord`: A list containing the current y coordinates of the points
+- `color`: The color of the tail
+- `n`: A parameter tuning the length of the tail (must be divisible by the number of elements in `xcoord` and `ycoord` lists)
 
 
 ## Notes:
