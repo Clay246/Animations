@@ -157,4 +157,39 @@ class Transitions:
                 self.counter += 1/transition_time
                 self.var = transition_type(initial, final, self.counter)
             elif t == starttime + transition_time:
-                self.counter = 0
+                self.counter = 0                
+                
+                
+                
+class Effects:
+
+    def __init__(self):
+        
+        self.xlist = []
+        self.ylist = []
+
+    # n must be divisible by number of elements in x and y lists
+    def tail(self, xcoord, ycoord, ax, color, n):
+
+        if len(self.xlist) < n:
+            for item in xcoord:
+                self.xlist.insert(0, item)
+            for item in ycoord:
+                self.ylist.insert(0, item)
+
+        if len(self.xlist) == n:
+            for item in xcoord:
+                del self.xlist[-1]
+                self.xlist.insert(0, item)
+            for item in ycoord:
+                del self.ylist[-1]
+                self.ylist.insert(0, item)
+
+        offsets = np.column_stack((self.xlist, self.ylist))
+        ax.set_offsets(offsets)
+        
+        color=color
+        alpha_array = [(1/(n**2))*((i-n)**2) for i in range(n)]
+        r, g, b = to_rgb(color)
+        color = [(r, g, b, alpha) for alpha in alpha_array]
+        ax.set_color(color)
