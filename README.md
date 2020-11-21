@@ -140,6 +140,7 @@ Creates a fading tail behind moving scatter plot points.
 `tail(xcoord, ycoord, ax, color, n)`
 - `xcoord`: A list containing the current x coordinates of the points
 - `ycoord`: A list containing the current y coordinates of the points
+- `ax`: A scatter plot that will be updated with the dots to form the tail
 - `color`: The color of the tail
 - `n`: A parameter tuning the length of the tail (must be divisible by the number of elements in `xcoord` and `ycoord` lists)
 
