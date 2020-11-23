@@ -82,7 +82,7 @@ class Transitions:
         if duration == 'inf':
             if t >= starttime and t < starttime + transition_time:
                 self.counter += 1/transition_time
-                dot.set_sizes([linear(size1, size2, self.counter)])
+                dot.set_sizes([transition_type(size1, size2, self.counter)])
             elif t == starttime + transition_time:
                 self.counter = 0
         else:
