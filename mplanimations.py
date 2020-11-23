@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib.colors import to_rgb, to_rgba
 import numpy as np
 
 interval = 20
