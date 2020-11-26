@@ -155,18 +155,7 @@ Creates a fading tail behind moving scatter plot points.
 - All transition instances must be instantiated in advance; they can not be instantiated in the FuncAnimation animation function. This can be done by, for example, typing `t1 = mplanimations.transitions()` outside of the animation function, and then using this instance in the animation function.
 - All transitions act on lines, dots, etc. already created outside of the animation function; they do not create the lines, dots, etc.; this means that the lines, dots etc. must be created outside of the animation function, and then they will be changed by the mplanimations methods.
 - `dot_transition()` does not function correctly when the duration is less than or equal to `transition_time`.
-
-
-
-## How It Works:
-
-The transitions use a kind of weighted average to create the intermediate lines.
-For the sinusoidal transition, the "weight" is "shifted" unevenly so as to create more intermediate lines closer to the beginning and final lines. The formula used to do this is:
-[L1[n-n(.5sin((pi/n)t-pi/2)+.5)]+L2[n(.5sin((pi/n)t-pi/2)+.5)]]/n
-where L1 is the NumPy array for the initial line, L2 is the NumPy array for the final line, n is a fixed number determined by the interval, and t is a number that counts up, usually from 0.
-For the linear transition, the weight is even and the intermediate lines are created through a simple weighted average using the formula:
-[L1(n-t)+L2(t)]/n
-where the variables are the same as those for the sinusoidal transition.
+- Exactly how the tails fade for the `tail` function can be changed if by changing `alpha_array = [(1/(n**2))*((i-n)**2) for i in range(n)]` in the mplanimations code. If you want it to fade faster a different function is needed; beware that the function must range between 0 and 1 for the `n` values.
 
 
 
