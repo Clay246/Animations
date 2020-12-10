@@ -194,3 +194,19 @@ class Effects:
         r, g, b = to_rgb(color)
         color = [(r, g, b, alpha) for alpha in alpha_array]
         ax.set_color(color)
+
+
+
+class Creations:
+
+    def __init__(self):
+
+        self.counter = 0
+
+    
+    # A function for creating lines entirely within the animation function
+    def create_line(self, i, starttime, name, x, y, ax, color, alpha):
+
+        t = time(i)
+        if t == 0:
+            self.graph = ax.plot(x,y, c=color, alpha=alpha)
