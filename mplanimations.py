@@ -8,6 +8,9 @@ n = 1000/interval
 def time(counter):
     return (interval*counter)/1000
 
+def normalize(array):
+    return array/array.max() - array.min()/array.max()
+
 def sine(initial, final, counter):
     return (initial*(n-n*(.5*np.sin((np.pi/n)*counter-(np.pi/2))+.5))+final*(n*(.5*np.sin((np.pi/n)*counter-(np.pi/2))+.5)))/n
     
@@ -127,6 +130,23 @@ class Transitions:
             transitionline.set_data(transition_type(xvals1, xvals2, self.counter), transition_type(yvals1, yvals2, self.counter))
         elif t == starttime + transition_time:
             self.counter = 0
+            
+            
+            
+    def scatter_transition(self, i, starttime, xvals1, xvals2, yvals1, yvals2, scatterplot, carray1, carray2, transition_time=1, transition_type=sine):
+        """
+        Creates a transition between two scatter plots with different points
+        """
+
+        t = time(i)
+
+        if t >= starttime and t < starttime + transition_time:
+            self.counter += 1/transition_time
+            scatterplot.set_offsets(np.column_stack((transition_type(xvals1, xvals2, self.counter), transition_type(yvals1, yvals2, self.counter))))
+            scatterplot.set_array(transition_type(carray1, carray2, self.counter))
+            # The mathematical precision of the line above needs to be investigated.
+        elif t == starttime + transition_time:
+            self.counter = 0
 
 
 
@@ -210,3 +230,4 @@ class Creations:
         t = time(i)
         if t == 0:
             self.graph = ax.plot(x,y, c=color, alpha=alpha)
+
