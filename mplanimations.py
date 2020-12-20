@@ -9,7 +9,7 @@ def time(counter):
     return (interval*counter)/1000
 
 def normalize(array):
-    return array/array.max() - array.min()/array.max()
+    return (array - array.min())/(array.max()-array.min())
 
 def sine(initial, final, counter):
     return (initial*(n-n*(.5*np.sin((np.pi/n)*counter-(np.pi/2))+.5))+final*(n*(.5*np.sin((np.pi/n)*counter-(np.pi/2))+.5)))/n
