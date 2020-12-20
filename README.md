@@ -102,6 +102,24 @@ Creates a smooth transition between two sets of parametric equations.
 - `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
 
 
+### Scatter Transition
+Creates a transition between two different scatter plots.
+
+`scatter_transition(i, starttime, xvals1, xvals2, yvals1, yvals2, scatterplot, carray1, carray2, transition_time=1, transition_type=sine)`
+- `i`: the index required by the FuncAnimation method
+- `starttime`: the time at which the transition should start, in seconds
+- `xvals1`: the numpy array that contains the initial x values
+- `xvals2`: the numpy array that contains the final x values
+- `yvals1`: the y values of the initial function in a numpy array
+- `yvals2`: the y values of the final function in a numpy array
+- `scatterplot`: the scatter plots that will be changed
+- `carray1`: the initial array that specifies the color of the scatter plot points
+- `carray2`: the final array that specifies the color of the scatter plot points
+- `transition_time`: the amount of time the transition will take, in seconds; default values is 1 second
+- `transition_type`: the type of transition that will be displayed; options are `mplanimations.sine` and `mplanimations.linear`; default is `mplanimations.sine`
+
+A few tips and warnings are in order for using this function. First, matplotlib scales the color based on the intial values that were plotted. This means that if the minimum and maximum of the two plots are different, then the final graph may not have the color scaled as you would like. To remedy this, I suggest using the `normalize` function that is in mplanimations so that the color scale is always the same.
+
 ### Variable Transition
 Creates a variable that smoothy transitions between two values.
 
@@ -143,6 +161,7 @@ Creates a fading tail behind moving scatter plot points.
 - `ax`: A scatter plot that will be updated with the dots to form the tail
 - `color`: The color of the tail
 - `n`: A parameter tuning the length of the tail (must be divisible by the number of elements in `xcoord` and `ycoord` lists)
+
 
 
 ## Notes:
